@@ -8,7 +8,7 @@
  *
  * @wordpress-plugin
  * Plugin Name: Plugin A
- * Plugin URI:  https://github.com/KnowTheCode/demo-composer-no-conflict
+ * Plugin URI:  https://github.com/hellofromtonya/demo-composer-no-conflict
  * Description: Plugin A with Composer
  * Version:     1.0.0
  * Author:      hellofromTonya
@@ -36,10 +36,5 @@ function run_the_demo(){
 		return;
 	}
 
-	$example = new Example( array(
-		'plugin'      => 'plugina',
-		'description' => 'Some description',
-	) );
-
-	d( $example->getArgs() );
+	d( ( new Example() )->getArgs() );
 }

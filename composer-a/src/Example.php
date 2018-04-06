@@ -7,12 +7,12 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 class Example {
 	protected $args;
 
-	public function __construct( array $args = array() ) {
+	public function __construct( array $args = [] ) {
 		$resolver = new OptionsResolver();
-		$resolver->setDefaults( array(
+		$resolver->setDefaults( [
 			'plugin'      => __NAMESPACE__,
 			'description' => 'Plugin A with Composer Example for no-conflict autoload.',
-		) );
+		] );
 
 		$this->args = $resolver->resolve( $args );
 	}

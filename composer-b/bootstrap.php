@@ -7,8 +7,8 @@
  * @license     GPL-2.0+
  *
  * @wordpress-plugin
- * Plugin Name: Plugin A
- * Plugin URI:  https://github.com/KnowTheCode/demo-composer-no-conflict
+ * Plugin Name: Plugin B
+ * Plugin URI:  https://github.com/hellofromtonya/demo-composer-no-conflict
  * Description: Plugin B with Composer
  * Version:     1.0.0
  * Author:      hellofromTonya
@@ -36,12 +36,7 @@ function run_the_demo(){
 		return;
 	}
 
-	$example = new Example( array(
-		'plugin'      => 'pluginb',
-		'description' => 'Some description',
-	) );
-
-	d( $example->getArgs() );
+	d( ( new Example() )->getArgs() );
 
 	include __DIR__ . '/views/notice.html';
 	die();
